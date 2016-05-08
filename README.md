@@ -17,6 +17,11 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 
 # Rationale
 
+## Examples
+
+- Install Sublime Text Package Control
+- Lookup vim command
+
 # Coding
 
 # Testing
