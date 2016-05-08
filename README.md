@@ -8,6 +8,11 @@ Command line tool to quickly look something up on Google!
 
 # Rationale
 
+## Examples
+
+- Install Sublime Text Package Control
+- Lookup vim command
+
 # Coding
 
 # Testing
