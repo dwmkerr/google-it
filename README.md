@@ -30,13 +30,13 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 
 # Current Tasks
 
-[ ] Setup the basic app template
-[ ] Support the basic search
-[ ] Command-line flag for number of results
-[ ] Continuous integration
-[ ] Installation bash script
-[ ] Windows installer
-[ ] Docker Image
-[ ] Publish to Docker Hub
-[ ] Article
+- [ ] Setup the basic app template
+- [ ] Support the basic search
+- [ ] Command-line flag for number of results
+- [ ] Continuous integration
+- [ ] Installation bash script
+- [ ] Windows installer
+- [ ] Docker Image
+- [ ] Publish to Docker Hub
+- [ ] Article
 
