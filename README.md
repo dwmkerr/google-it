@@ -6,6 +6,15 @@ Command line tool to quickly look something up on Google!
 
 # Installation
 
+## Setting up the Google Custom Search API Key
+
+TODO document fully, for now:
+
+```bash
+echo 'export GOOGLEIT_API_KEY=fbgfhfgh_DSFGTYUasDDSGfd' >> ~/.bashrc
+echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
+```
+
 # Rationale
 
 # Coding
