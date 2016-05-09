@@ -1,5 +1,6 @@
 package main
 
+import "github.com/fatih/color"
 import "log"
 import "fmt"
 import "os"
@@ -22,6 +23,10 @@ func main() {
     fmt.Println("Args: ", args)
 
     helpFlag := ParseHelpFlag(flatArgs)
+    if helpFlag == true {
+        showHelp()
+        os.Exit(0)
+    }
 
     r := regexp.MustCompile(`(-r|--results)(=?|\s)(?P<ResultsCount>\d+)`)
     fmt.Println(r)
@@ -38,9 +43,9 @@ func main() {
     apiKey := os.Getenv("GOOGLEIT_API_KEY")
     engineId := os.Getenv("GOOGLEIT_ENGINE_ID")
 
-    fmt.Println("Help Flag:     ", helpFlag)
-    fmt.Println("Results Count: ", resultsCount)
-    fmt.Println("Query:         ", query)
+    // fmt.Println("Help Flag:     ", helpFlag)
+    // fmt.Println("Results Count: ", resultsCount)
+    // fmt.Println("Query:         ", query)
 
     //  Run the search
     results, err := DoSearch(query, apiKey, engineId)
@@ -50,12 +55,17 @@ func main() {
     }
 
     //  Show the results.
-    for i := 0; i < len(results.Items); i++ {
+    for i := 0; i < len(results.Items) && i < resultsCount; i++ {
         item := results.Items[i]
-        fmt.Println("Title: ", item.Title)
-        fmt.Println("Link: ", item.Link)
-        fmt.Println("Snippet: ", item.Snippet)
+        PrintResult(item)
     }
+}
+
+func PrintResult(item ResultItem) {
+    color.Green(item.Title)
+    color.White(item.Snippet)
+    color.Cyan(item.Link)
+    fmt.Println()
 }
 
 func ParseHelpFlag(flatArgs string) bool {
@@ -70,6 +80,10 @@ func ParseResultsFlag(flatArgs string, defaultValue int) (int, error) {
         return defaultValue, nil
     } else {
         i, err := strconv.Atoi(matches[3])
+        if err == nil && i > 10 {
+            fmt.Println("Results are limited to 10...")
+            i = 10
+        }
         return i, err
     }
 }
@@ -77,7 +91,7 @@ func ParseResultsFlag(flatArgs string, defaultValue int) (int, error) {
 
 func showHelp() {
     fmt.Println("usage: google-it [--results] [--help] <query>")
-    fmt.Println("  --results, -r: Number of results to show. Default = 3")
+    fmt.Println("  --results, -r: Number of results to show. Default = 3, Max = 10")
     fmt.Println("  --help, -h:    Show help")
     fmt.Println("  <query>:       Text to search for")
     fmt.Println("")
