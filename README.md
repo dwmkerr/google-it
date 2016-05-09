@@ -32,10 +32,10 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 
 - [X] Setup the basic app template
 - [X] Support the basic search
-- [ ] Command-line flag for number of results
+- [X] Command-line flag for number of results
 - [ ] Support limiting the hits per day
 - [ ] Support opening a result (e.g. `gi -g 3`)
-- [ ] Pretty-print the results
+- [X] Pretty-print the results
 - [ ] Continuous integration
 - [ ] Installation bash script
 - [ ] Windows installer

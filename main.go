@@ -16,21 +16,15 @@ func main() {
     flatArgs := strings.Join(args, " ")
 
     //  Bail if we have too few arguments.
-    if(argCount < 2) {
+    if(argCount == 0) {
         showHelp()
     }
-
-    fmt.Println("Args: ", args)
-
+    
     helpFlag := ParseHelpFlag(flatArgs)
     if helpFlag == true {
         showHelp()
         os.Exit(0)
     }
-
-    r := regexp.MustCompile(`(-r|--results)(=?|\s)(?P<ResultsCount>\d+)`)
-    fmt.Println(r)
-
 
     resultsCount, err := ParseResultsFlag(flatArgs, 3)
     if err != nil {
@@ -55,6 +49,7 @@ func main() {
     }
 
     //  Show the results.
+    fmt.Println()
     for i := 0; i < len(results.Items) && i < resultsCount; i++ {
         item := results.Items[i]
         PrintResult(item)

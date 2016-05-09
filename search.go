@@ -17,7 +17,6 @@ func DoSearch(query string, apiKey string, searchEngineId string) (results Googl
         url.QueryEscape(apiKey), 
         url.QueryEscape(searchEngineId),
         url.QueryEscape(query))
-    fmt.Println("URL: ", url)
 
     // Build the request
     req, err := http.NewRequest("GET", url, nil)
