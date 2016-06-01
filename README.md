@@ -85,7 +85,7 @@ Copy your API. *This is sensitive* - if others get hold of it they can use your 
 
 That's it! Just kidding, of course there's more. We now need to create a Custom Search Engine.
 
-Sign up for Google Custom Search Engine (free).
+Sign up for [Google Custom Search Engine](https://cse.google.com) (free).
 
 ![Screenshot 7](assets/8.jpg)
 
@@ -101,7 +101,7 @@ Change 'Sites to Search' to 'Search entire web but emphasize included sites'.
 
 ![Screenshot 10](assets/11.jpg)
 
-5. Grab your 'Search Engine ID' and copy it.
+Grab your 'Search Engine ID' and copy it.
 
 ![Screenshot 11](assets/12.jpg)
 
