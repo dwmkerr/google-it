@@ -56,15 +56,30 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 
 To use the Google Search APIs you'll need an API key set in an environment variable. It's a total pain, and essentially makes this tool far more hassle than it's worth. Google won't let you use their search engine without charging you, scraping the search page violates their T&Cs. We can however get up to 100 searches per day for free, and `google-it` will make sure you don't go above the limit. Here's how you get a key:
 
-1. Sign up for the [Google Cloud Platform](https://cloud.google.com/). You can use the free trial or a full fat account - either way we'll stay in the free tier (but you'll still need to enter a credit card details).
-2. Navigate to the 'API Manager' page.
-3. Select 'Custom Search API'.
-4. Choose 'Enable'.
-5. Choose 'Go to Credentials' to set up an API key.
-6. For the 'Where will you be calling the API from' section, enter 'Other UI':
-7. Press 'What Credentials Do I Need?' and give your key a nice name. Choose 'Create API Key'.
-8. Copy your API. *This is sensitive* - if others get hold of it they can use your Search API and potential cause charges on your account. The one shown below is disabled.
-9. Hit 'Done'.
+Sign up for the [Google Cloud Platform](https://cloud.google.com/). You can use the free trial or a full fat account - either way we'll stay in the free tier (but you'll still need to enter a credit card details). Navigate to the 'API Manager' page.
+![Screenshot 1](assets/2.jpg)
+
+Select 'Custom Search API'.
+![Screenshot 2](assets/3.jpg)
+
+Choose 'Enable'.
+![Screenshot 3](assets/4.jpg)
+
+Choose 'Go to Credentials' to set up an API key.
+![Screenshot 4](assets/5.jpg)
+
+For the 'Where will you be calling the API from' section, enter 'Other UI':
+![Screenshot 5](assets/6.jpg)
+
+Press 'What Credentials Do I Need?' and give your key a nice name. Choose 'Create API Key'.
+![Screenshot 6](assets/7.jpg)
+
+Copy your API. *This is sensitive* - if others get hold of it they can use your Search API and potential cause charges on your account. The one shown below is disabled.
+![Screenshot 7](assets/8.jpg)
+
+Hit 'Done'.
+![Screenshot 8](assets/8.jpg)
+
 
 That's it! Just kidding, of course there's more. We now need to create a Custom Search Engine.
 
