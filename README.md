@@ -1,6 +1,8 @@
 # google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it)
 
-Command line tool to quickly look something up on Google! *Disclaimer*: This is my first Golang project, so it's pretty stanky. Any PRs or suggestions on how to improve are welcome!
+Command line tool to quickly look something up on Google! 
+
+*Disclaimer*: This is my first Golang project, built as a learning exercise, so it's pretty grotty. Any PRs or suggestions on how to improve are welcome!
 
 ![Video of Google It in action](assets/google-it.gif)
 
@@ -63,29 +65,9 @@ An image which runs the app is available and tagged as: `[dwmkerr/google-it](htt
 docker run -it -e GOOGLEIT_API_KEY=<key> -e GOOGLEIT_ENGINE_ID=<engineid> dwmkerr/google-it "something"
 ```
 
-# Current Tasks
-
-- [X] Setup the basic app template
-- [X] Support the basic search
-- [X] Command-line flag for number of results
-- [X] Little GIF showing the magic
-- [X] Support limiting the hits per day
-- [X] Support opening a result (e.g. `gi -o 3`)
-- [X] Pretty-print the results
-- [X] Continuous integration
-- [X] Document horrendous Google Search API crap
-- [ ] Installation bash script
-- [ ] Windows installer
-- [ ] Docker Image
-- [ ] Publish to Docker Hub
-- [ ] Article
-
-# Future Improvements
-
-- Support ignoring the throttle with `-i` or `--ignore`.
-- Support 'I Feel Lucky' to immediately open results (`-ifl`)
-
 # Appendix 1: Getting an API Key
+
+**IMPORTANT**: Setting up an API key for seaching requires signing up to the Google Cloud Platform with a credit card. The google-it app limits requests to less than 100 per day so that you will not be billed, but I offer **no guarantee** of the reliability or quality of this code, if you do use an API you do so at your own risk and I encourage you to monitor the API usage carefully to ensure you are not billed.
 
 To use the Google Search APIs you'll need an API key set in an environment variable. It's a total pain, and essentially makes this tool far more hassle than it's worth. Google won't let you use their search engine without charging you, scraping the search page violates their T&Cs. We can however get up to 100 searches per day for free, and `google-it` will make sure you don't go above the limit. Here's how you get a key:
 
