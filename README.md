@@ -1,34 +1,67 @@
 # google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it)
 
-Command line tool to quickly look something up on Google!
+Command line tool to quickly look something up on Google! *Disclaimer*: This is my first Golang project, so it's pretty stanky. Any PRs or suggestions on how to improve are welcome!
 
 ![Video of Google It in action](assets/google-it.gif)
 
 # Usage
 
-# Installation
-
-## Setting up the Google Custom Search API Key
-
-TODO document fully, for now:
+Google something:
 
 ```bash
-echo 'export GOOGLEIT_API_KEY=fbgfhfgh_DSFGTYUasDDSGfd' >> ~/.bashrc
-echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
+$ google-it "something"
+
+Something - Wikipedia, the free encyclopedia
+Something is an indefinite pronoun in the English language. It may refer to: 
+Contents. [hide]. 1 Philosophy and language; 2 Music. 2.1 Albums; 2.2 Songs. 3 
+See ...
+[0] https://en.wikipedia.org/wiki/Something
+
+Something Awful: The Internet Makes You Stupid
+3 hours ago ... SomethingAwful.com offers daily internet news, reviews of horrible movies, 
+games, and social networking, anime and adult parody, and one of ...
+[1] http://www.somethingawful.com/
+
+Something | Define Something at Dictionary.com
+Something definition, some thing; a certain undetermined or unspecified thing: 
+Something is wrong there. Something's happening. See more.
+[2] http://www.dictionary.com/browse/something
+
+18/100 searches made today...
 ```
 
-# Rationale
+Open a link from the last set of search results:
 
-## Examples
+```bash
+$ google-it -o 2 # opens link '2' from the list above
+```
 
-- Install Sublime Text Package Control
-- Lookup vim command
+Get help on other commands:
 
-# Coding
+```bash
+$ google-it -h
+```
 
-# Testing
+# Installation
 
-# Contributing
+There are a few options. In all cases, you will have to have set up your API Key, instructions are in [Appendix 1]().
+
+## Using Go Tools
+
+Use `go get` to download, install and build. As long as your go bin is in your path, you can use the tool straight away:
+
+```bash
+go get github.com/dwmkerr/google-it
+google-it "something"
+```
+
+## Using Docker
+
+An image which runs the app is available and tagged as: `[dwmkerr/google-it](https://hub.docker.com/r/dwmkerr/google-it/)`:
+
+```bash
+docker run -it -e GOOGLEIT_API_KEY=<key> -e GOOGLEIT_ENGINE_ID=<engineid> dwmkerr/google-it "something"
+```
 
 # Current Tasks
 
@@ -40,7 +73,7 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 - [X] Support opening a result (e.g. `gi -o 3`)
 - [X] Pretty-print the results
 - [X] Continuous integration
-- [ ] Document horrendous Google Search API crap
+- [X] Document horrendous Google Search API crap
 - [ ] Installation bash script
 - [ ] Windows installer
 - [ ] Docker Image
