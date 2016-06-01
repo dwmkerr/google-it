@@ -2,6 +2,8 @@
 
 Command line tool to quickly look something up on Google!
 
+![Video of Google It in action](assets/google-it.gif)
+
 # Usage
 
 # Installation
@@ -33,11 +35,9 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 - [X] Setup the basic app template
 - [X] Support the basic search
 - [X] Command-line flag for number of results
-- [ ] Little GIF showing the magic
-- [ ] Support limiting the hits per day
-- [ ] Support opening a result (e.g. `gi -g 3`)
-- [ ] Support ignore throttle
-- [ ] Support 'i feel lucky' (e.g. google it, open first result)
+- [X] Little GIF showing the magic
+- [X] Support limiting the hits per day
+- [X] Support opening a result (e.g. `gi -o 3`)
 - [X] Pretty-print the results
 - [X] Continuous integration
 - [ ] Document horrendous Google Search API crap
@@ -46,4 +46,9 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 - [ ] Docker Image
 - [ ] Publish to Docker Hub
 - [ ] Article
+
+# Future Improvements
+
+- Support ignoring the throttle with `-i` or `--ignore`.
+- Support 'I Feel Lucky' to immediately open results (`-ifl`)
 
