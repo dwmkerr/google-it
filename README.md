@@ -10,7 +10,7 @@ Command line tool to quickly look something up on Google!
 
 Google something:
 
-```bash
+```
 $ google-it "something"
 
 Something - Wikipedia, the free encyclopedia
@@ -46,7 +46,7 @@ $ google-it -h
 
 # Installation
 
-There are a few options. In all cases, you will have to have set up your API Key, instructions are in [Appendix 1]().
+There are a few options. In all cases, you will have to set up your API Key, instructions are in [Appendix 1](#appendix-1-getting-an-api-key).
 
 ## Using Go Tools
 
