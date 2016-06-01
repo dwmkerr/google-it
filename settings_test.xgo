@@ -1,0 +1,12 @@
+package main
+
+import "testing"
+import . "github.com/smartystreets/goconvey/convey"
+
+func TestSpec(t *testing.T) {
+    Convey("The settings structure", t, func() {
+        Convey("Should return default settings in the case of no file or content", func() {
+            So(ParseHelpFlag("--not --present"), ShouldEqual, false)
+        })
+    })
+}
