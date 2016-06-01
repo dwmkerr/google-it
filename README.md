@@ -82,25 +82,28 @@ Press 'What Credentials Do I Need?' and give your key a nice name. Choose 'Creat
 
 Copy your API. *This is sensitive* - if others get hold of it they can use your Search API and potential cause charges on your account. The one shown below is disabled. Hit 'Done'.
 
-![Screenshot 7](assets/8.jpg)
 
 That's it! Just kidding, of course there's more. We now need to create a Custom Search Engine.
 
 Sign up for Google Custom Search Engine (free).
 
-![Screenshot 8](assets/9.jpg)
+![Screenshot 7](assets/8.jpg)
 
 Create a new engine, use any website for now (e.g. *.stackoverflow.com).
-![Screenshot 9](assets/10.jpg)
+
+![Screenshot 8](assets/9.jpg)
 
 Hit 'Modify your Search Engine'
 
-![Screenshot 10](assets/11.jpg)
+![Screenshot 9](assets/10.jpg)
 
 Change 'Sites to Search' to 'Search entire web but emphasize included sites'.
-![Screenshot 11](assets/12.jpg)
+
+![Screenshot 10](assets/11.jpg)
 
 5. Grab your 'Search Engine ID' and copy it.
+
+![Screenshot 11](assets/12.jpg)
 
 That's it! At least for Google. Now add the following two environment variables to your `.bash_rc` or `.profile` or whatever:
 
