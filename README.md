@@ -46,7 +46,7 @@ $ google-it -h
 
 # Installation
 
-There are a few options. In all cases, you will have to set up your API Key, instructions are in [Appendix 1](#appendix-1-getting-an-api-key).
+There are a few options. In all cases you will have to set up your API Key by following the instructions in [Appendix 1](#appendix-1-getting-an-api-key).
 
 ## Using Go Tools
 
@@ -139,4 +139,4 @@ curl -e http://www.my-ajax-site.com \
 
 But they deprecated that a while ago. If anyone from Google ever reads this, please bring it back, just limit it or something so nerds like me can search from a terminal.
 
-If anyone can find a better/easier way to get search capabilites in this tool please let me know!
+If anyone can find a better/easier way to get search capabilities in this tool please let me know!
