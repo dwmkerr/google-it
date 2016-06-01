@@ -1,6 +1,6 @@
 # google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it)
 
-Command line tool to quickly look something up on Google! 
+Google It is a command line tool to quickly look something up on Google, without leaving your terminal or console.
 
 *Disclaimer*: This is my first Golang project, built as a learning exercise, so it's pretty grotty. Any PRs or suggestions on how to improve are welcome!
 
