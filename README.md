@@ -1,4 +1,4 @@
-# google-it
+# google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it)
 
 Command line tool to quickly look something up on Google!
 
@@ -36,7 +36,7 @@ echo 'export GOOGLEIT_ENGINE_ID=20932489234987234987:dfdse2343redf' >> ~/.bashrc
 - [ ] Support limiting the hits per day
 - [ ] Support opening a result (e.g. `gi -g 3`)
 - [X] Pretty-print the results
-- [ ] Continuous integration
+- [X] Continuous integration
 - [ ] Installation bash script
 - [ ] Windows installer
 - [ ] Docker Image
