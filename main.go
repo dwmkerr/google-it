@@ -47,10 +47,18 @@ func main() {
 	apiKey := os.Getenv("GOOGLEIT_API_KEY")
 	engineID := os.Getenv("GOOGLEIT_ENGINE_ID")
 
+	//	If there are no API variables, bail.
+	if apiKey == "" || engineID == "" {
+		color.Red("Missing GOOGLEIT_API_KEY or GOOGLEIT_ENGINE_ID environment variables!")
+		color.White("Check the documentation on github.com/dwmkerr/google-it for instructions.")
+		os.Exit(1)
+	}
+
 	//  Load the settings.
 	settings, err := LoadSettings()
 	if err != nil {
-		log.Fatal("Error loading settings: ", err)
+		color.Red("Error loading settings: ", err)
+		os.Exit(1)
 	}
 
 	openLinkID := params.Open.LinkId
