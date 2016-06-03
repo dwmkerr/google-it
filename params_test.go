@@ -37,7 +37,7 @@ func TestSpec(t *testing.T) {
 			So(params.ShowHelp.Present, ShouldEqual, false)
 			So(params.Results.Present, ShouldEqual, false)
 			So(params.Open.Present, ShouldEqual, true)
-			So(params.Open.LinkId, ShouldEqual, "5")
+			So(params.Open.LinkID, ShouldEqual, "5")
 			So(err, ShouldEqual, nil)
 		})
 	})

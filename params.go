@@ -30,17 +30,17 @@ func ParseParams(args []string) (Params, error) {
 	flatArgs := strings.Join(args, " ")
 
 	//  Handle the help param.
-	params.ShowHelp.Present = parseHelpFlag(flatArgs)
+	params.ShowHelp.Present = ParseHelpFlag(flatArgs)
 
 	//  Handle the results param.
 	var err error
-	params.Results.Present, params.Results.Count, err = parseResultsFlag(flatArgs)
+	params.Results.Present, params.Results.Count, err = ParseResultsFlag(flatArgs)
 	if err != nil {
 		return params, err
 	}
 
 	//  Handle the open param.
-	params.Open.Present, params.Open.LinkID = parseOpenFlag(flatArgs)
+	params.Open.Present, params.Open.LinkID = ParseOpenFlag(flatArgs)
 	if err != nil {
 		return params, err
 	}
@@ -48,14 +48,14 @@ func ParseParams(args []string) (Params, error) {
 	return params, nil
 }
 
-//	Internally used to check for the help flag.
-func parseHelpFlag(flatArgs string) bool {
+// ParseHelpFlag Internally used to check for the help flag.
+func ParseHelpFlag(flatArgs string) bool {
 	match, _ := regexp.MatchString(`-h|--help`, flatArgs)
 	return match
 }
 
-//	Checks for the results flag and returns its value.
-func parseResultsFlag(flatArgs string) (bool, int, error) {
+// ParseResultsFlag Checks for the results flag and returns its value.
+func ParseResultsFlag(flatArgs string) (bool, int, error) {
 	re := regexp.MustCompile(`(-r|--results)(=?|\s)(?P<ResultsCount>\d+)`)
 	matches := re.FindStringSubmatch(flatArgs)
 	if len(matches) != 4 {
@@ -65,8 +65,8 @@ func parseResultsFlag(flatArgs string) (bool, int, error) {
 	return true, i, err
 }
 
-//  Given args, returns the value of the --open=linkid param
-func parseOpenFlag(flatArgs string) (bool, string) {
+// ParseOpenFlag Given args, returns the value of the --open=linkid param
+func ParseOpenFlag(flatArgs string) (bool, string) {
 	//  todo fix regex for any char
 	re := regexp.MustCompile(`(-o|--open)(=?|\s)(?P<LinkId>\d+)`)
 	matches := re.FindStringSubmatch(flatArgs)
