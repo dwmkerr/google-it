@@ -15,7 +15,7 @@ const defaultResultsCount = 3
 func main() {
 
 	//  Get the number of command line parameters.
-	args := os.Args[1:]
+	args := os.Args
 	argCount := len(args)
 
 	//  Read the parameters.
@@ -61,12 +61,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	openLinkID := params.Open.LinkId
+	openLinkID := params.Open.LinkID
 	if openLinkID != "" {
 		for i := 0; i < len(settings.Links); i++ {
-			if settings.Links[i].Id == openLinkID {
-				color.Green("Opening [%s] %s...", openLinkID, settings.Links[i].Uri)
-				browser.OpenURL(settings.Links[i].Uri)
+			if settings.Links[i].ID == openLinkID {
+				color.Green("Opening [%s] %s...", openLinkID, settings.Links[i].URI)
+				browser.OpenURL(settings.Links[i].URI)
 				os.Exit(0)
 			}
 		}
@@ -143,8 +143,8 @@ func printResult(item ResultItem, linkNumber int) Link {
 	color.Cyan("[%d] %s", linkNumber, item.Link)
 	fmt.Println()
 	return Link{
-		Id:  strconv.Itoa(linkNumber),
-		Uri: item.Link,
+		ID:  strconv.Itoa(linkNumber),
+		URI: item.Link,
 	}
 }
 
