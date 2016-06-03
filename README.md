@@ -2,7 +2,7 @@
 
 Google It is a command line tool to quickly look something up on Google, without leaving your terminal or console.
 
-*Disclaimer*: This is my first Golang project, built as a learning exercise, so it's pretty grotty. Any PRs or suggestions on how to improve are welcome!
+*Disclaimer*: This is my first Golang project, built as a learning exercise, so it's pretty grotty. Any PRs or suggestions on how to improve are welcome! This project accompanies my blog post [Is it worth persevering with Golang?](http://www.dwmkerr.com/is-it-worth-persevering-with-golang/).
 
 ![Video of Google It in action](assets/google-it.gif)
 
