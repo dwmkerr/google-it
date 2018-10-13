@@ -1,4 +1,4 @@
-# google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it) [![Coverage Status](https://coveralls.io/repos/github/dwmkerr/google-it/badge.svg?branch=master)](https://coveralls.io/github/dwmkerr/google-it?branch=master)
+# google-it [![Build Status](https://travis-ci.org/dwmkerr/google-it.svg?branch=master)](https://travis-ci.org/dwmkerr/google-it) [![Coverage Status](https://coveralls.io/repos/github/dwmkerr/google-it/badge.svg?branch=master)](https://coveralls.io/github/dwmkerr/google-it?branch=master) [![GuardRails badge](https://badges.production.guardrails.io/dwmkerr/google-it.svg)](https://www.guardrails.io)
 
 Google It is a command line tool to quickly look something up on Google, without leaving your terminal or console.
 
